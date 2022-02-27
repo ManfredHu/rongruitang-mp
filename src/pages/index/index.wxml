@@ -1,0 +1,8 @@
+<!--index.wxml-->
+<view class="container">
+  <info user-info="{{userInfo}}" />
+  <view class="usermotto">
+    <text class="user-motto">{{motto}}</text>
+  </view>
+  <button bindtap="bindViewTap"> logs </button>
+</view>

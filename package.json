@@ -1,0 +1,21 @@
+{
+  "name": "rongruitang-mp",
+  "version": "1.0.0",
+  "private": "true",
+  "scripts": {
+    "build": "mpflow-service build",
+    "dev": "mpflow-service dev",
+    "dev:open": "mpflow-service dev --open"
+  },
+  "dependencies": {
+    "@mpflow/plugin-babel": "^0.0.37",
+    "@mpflow/plugin-css": "^0.0.33",
+    "@mpflow/plugin-typescript": "^0.0.33",
+    "@mpflow/service": "^0.0.33"
+  },
+  "devDependencies": {
+    "@babel/runtime": "^7.11.2",
+    "@types/wechat-miniprogram": "^2.11.0",
+    "typescript": "^3.9.7"
+  }
+}
