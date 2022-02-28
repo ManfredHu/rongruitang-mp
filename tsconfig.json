@@ -6,11 +6,19 @@
     "moduleResolution": "node",
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
+    "allowJs": true,
+    "resolveJsonModule": true,
     "sourceMap": true,
     "baseUrl": ".",
     "paths": {
       "@/*": [
         "src/*"
+      ],
+      "@base/*": [
+        "src/base/*"
+      ],
+      "@utils/*": [
+        "src/utils/*"
       ]
     },
     "lib": [
@@ -21,7 +29,7 @@
     "src/**/*.ts",
     "src/**/*.tsx",
     "typings"
-  ],
+, "src/custom-tab-bar/index.js"  ],
   "exclude": [
     "node_modules"
   ]
