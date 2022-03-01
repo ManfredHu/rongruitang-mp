@@ -21,7 +21,7 @@ export type HomeCard = {
 export const homeCards: HomeCard[] = [
   {
     type: "address",
-    title: "广东省东莞市虎门镇连升路93号",
+    title: "广东省东莞市虎门镇连升路93号之十二102室",
     titleCenter: false,
     icon: addressIcon.default as string,
   },
@@ -54,7 +54,7 @@ export const homeLocation = {
 
 // https://developers.weixin.qq.com/miniprogram/dev/api/device/phone/wx.makePhoneCall.html
 export const phoneCall = {
-  phoneNumber: "13800138000",
+  phoneNumber: "13316609357",
   success() {},
   fail() {},
   complete() {},

@@ -1,5 +1,6 @@
 import Base from './Base'
-
+import {profile} from '@config/index'
+import appJson from '../app.json'
 interface IndexData {
   selected: number;
 }
@@ -26,6 +27,11 @@ export class BasePage extends Base {
 
   _attachMethods() {
     this.pageParams.setTabBar = this.setTabBar;
+
+    // 分享兜底
+    if (!this.pageParams.onShareAppMessage) {
+      this.pageParams.onShareAppMessage = this.onShareAppMessage;
+    }
   }
 
   setTabBar(params: IndexData) {
@@ -38,6 +44,15 @@ export class BasePage extends Base {
     } else {
       throw new Error("not getTabBar methods");
     }
+  }
+
+  onShareAppMessage() {
+    return {
+      title: profile.title,
+      path: appJson.pages[0],
+      imageUrl:
+        "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/荣瑞堂5比4分享用.png",
+    };
   }
 }
 
