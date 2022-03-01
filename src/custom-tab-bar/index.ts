@@ -45,12 +45,12 @@ const myApp = getApp();
 Component({
   data: {
     selected: 0,
-    color: themeJson[(myApp.globalData as GlobalData).theme],
-    selectedColor: themeJson[(myApp.globalData as GlobalData).theme],
+    color: themeJson[(myApp.globalData as GlobalData).theme].tabBarColor,
+    selectedColor:
+      themeJson[(myApp.globalData as GlobalData).theme].tabBarSelectedColor,
     list: tabBarList,
   },
-  attached() {
-  },
+  attached() {},
   methods: {
     switchTab(e: WechatMiniprogram.Event) {
       const data = e.currentTarget.dataset;

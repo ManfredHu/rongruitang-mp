@@ -1,15 +1,27 @@
 import { createPage, BasePage } from "@base/BasePage";
-
+import {
+  profile,
+  homeCards,
+  HomeCard,
+  homeLocation,
+  phoneCall,
+} from "@config/index";
 //获取应用实例
 let mpApp = getApp({})
 
 createPage({
   name: "page/index/index",
   data: {
-    motto: "Hello World",
-    userInfo: {},
-    hasUserInfo: false,
-    canIUse: wx.canIUse("button.open-type.getUserInfo"),
+    // motto: "Hello World",
+    // userInfo: {},
+    // hasUserInfo: false,
+    // canIUse: wx.canIUse("button.open-type.getUserInfo"),
+
+    profileAvator: profile.avator,
+    profileDesc: profile.desc,
+    profileTitle: profile.title,
+    homeCards,
+    sessionForm: {}, // 客服私有
   },
   //事件处理函数
   bindViewTap: function () {
@@ -19,8 +31,8 @@ createPage({
   },
   onShow() {
     (this as BasePage).setTabBar({
-      selected: 0
-    })
+      selected: 0,
+    });
   },
   onLoad: function () {
     if (mpApp.globalData.userInfo) {
@@ -57,5 +69,27 @@ createPage({
       userInfo: e.detail.userInfo,
       hasUserInfo: true,
     });
+  },
+  infoHandleTap(e) {
+    const type = e.currentTarget.dataset.type as HomeCard["type"];
+    if (!type) console.error(e);
+    if (type === "address") {
+      this.onAddressTap();
+    } else if (type === "phone") {
+      this.onPhoneTap();
+    } else {
+      throw new Error(`infoHandleTap type not support ${type}`);
+    }
+  },
+  onContact() {
+    console.log(`联系客服`);
+  },
+  onAddressTap() {
+    console.log(`homeLocation`, homeLocation);
+    wx.openLocation(homeLocation);
+  },
+  onPhoneTap() {
+    console.log(`phoneCall`, phoneCall);
+    wx.makePhoneCall(phoneCall);
   },
 });

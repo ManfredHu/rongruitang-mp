@@ -14,7 +14,7 @@ const HostMap = {
 };
 
 module.exports = {
-  appId: "wx819cc5ff0014948e",
+  appId: "wx94687d0c59c97070",
   app: "src/app",
   compileType: "miniprogram",
   plugins: [
@@ -36,6 +36,7 @@ module.exports = {
     // 别名设置, require.resolve
     config.resolve.alias.set("@base", "src/base");
     config.resolve.alias.set("@utils", "src/utils");
+    config.resolve.alias.set("@config", "src/config");
   },
   settings: {
     urlCheck: true,

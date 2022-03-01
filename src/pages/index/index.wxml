@@ -1,8 +1,32 @@
 <!--index.wxml-->
 <view class="container">
-  <info user-info="{{userInfo}}" />
-  <view class="usermotto">
-    <text class="user-motto">{{motto}}</text>
+  <view class="banner"></view>
+  <view class="profile box">
+    <image class="profile_avator" src="{{profileAvator}}"></image>
+    <view class="profile_info">
+      <view class="profile_title">{{profileTitle}}</view>
+      <view class="profile_desc">{{profileDesc}}</view>
+    </view>
   </view>
-  <button bindtap="bindViewTap"> logs </button>
+
+  <view class="info box">
+    <view class="info-title">联系与咨询</view>
+    <view class="info-items">
+      <view class="info-item {{item.type}}" wx:for="{{homeCards}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+        <view class="info-item__box" wx:if="{{item.type !== 'kf'}}" catch:tap="infoHandleTap" data-type="{{item.type}}">
+          <image class="icon" src="{{item.icon}}"></image>
+          <view class="info-item__title">{{item.title}}</view>
+        </view>
+        <button class="info-item__box kf-button" wx:else open-type="contact" bind:contact="onContact" session-from="{{sessionForm}}">
+          <image class="icon" src="{{item.icon}}"></image>
+          <view class="info-item__title">{{item.title}}</view>
+        </button>
+      </view>
+    </view>
+  </view>
+
+  <view class="info box">
+    <view class="info-title">医师介绍</view>
+    <view class="info-items"></view>
+  </view>
 </view>
