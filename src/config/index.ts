@@ -59,3 +59,64 @@ export const phoneCall = {
   fail() {},
   complete() {},
 };
+
+export const doctorList = [
+  {
+    name: "彭锐",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/彭锐512.jpg",
+    title: "医学博士，副教授，副主任中医师",
+    desc: `擅长xxxx`,
+  },
+  {
+    name: "贾超",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/贾超512.jpg",
+    title: "医学博士，主任中医师，硕士生导师",
+    desc: `擅长xxxx`,
+  },
+  {
+    name: "董秀兰",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/董秀兰512.jpg",
+    title: "医学博士，硕士研究生导师",
+    desc: `擅长xxxx`,
+  },
+  {
+    name: "张顺荣",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/张顺荣512.jpg",
+    title: "医学学士",
+    desc: `擅长xxxx`,
+  },
+  {
+    name: "刘杰凯",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/刘杰凯512.jpg",
+    title: "针灸推拿科，主治中医师",
+    desc: `擅长xxxx`,
+  },
+  {
+    name: "张蕊",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/张蕊512.jpg",
+    title: "医学硕士，医学博士在读",
+    desc: `擅长xxxx`,
+  },
+  {
+    name: "黄智强",
+    avator:
+      "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/512/黄智强512.jpg",
+    title: "医师",
+    desc: `擅长xxxx`,
+  },
+];
+
+export const bannerImgs = [
+  "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/rongruitang_banner_output/banner2.jpg",
+  "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/rongruitang_banner_output/banner3.jpg",
+  "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/rongruitang_banner_output/banner1.jpg",
+  "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/rongruitang_banner_output/banner4.jpg",
+  "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/rongruitang_banner_output/banner5.jpg",
+  "https://manfredhu-1252588796.cos.ap-guangzhou.myqcloud.com/uPic/rongruitang_banner_output/banner6.jpg",
+]

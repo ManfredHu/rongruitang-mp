@@ -8,9 +8,17 @@
 .banner{
   width: 100%;
   height: @banner-height;
-  padding: 32rpx;
-  background: url(https://img0.baidu.com/it/u=1364121247,2433976786&fm=253&fmt=auto&app=120&f=JPEG?w=751&h=500) center center;
+  // padding: 32rpx;
+  background: linear-gradient(180deg,#2ecc71 0,#69ca91 25%);
   box-sizing: border-box;
+  &-swiper{
+    height: 100%;
+    width: 100%;
+    &-img{
+      height: 100%;
+      width: 100%;
+    }
+  }
 }
 
 .box{
@@ -96,4 +104,52 @@
       font-size: 30rpx;
     }
   }
+
+  &-userlist{
+    display: flex;
+    flex-direction: column;
+    &-item{
+      display: flex;
+      padding: 20rpx 0;
+      position: relative;
+      &:after{
+        content: " ";
+        height: 1px;
+        width: 200%;
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        transform-origin: 0 0;
+        transform: scale(.5);
+        background: var(--weui-BG-3);
+        pointer-events: none;
+      }
+      &__avator{
+        height: 128rpx;
+        width: 128rpx;
+        border-radius: 8rpx;
+        margin-right: 20rpx;
+      }
+      &__box{
+        display: flex;
+        flex-direction: column;
+      }
+      &__name{
+        font-size: 30rpx;
+        margin-bottom: auto;
+      }
+      &__title{
+        font-size: 28rpx;
+        color: var(--weui-FG-1);
+      }
+      &__desc{
+        font-size: 28rpx;
+        color: var(--weui-FG-1);
+      }
+    }
+  }
+}
+.userlist{
+  margin-bottom: 14rpx;
 }

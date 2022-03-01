@@ -1,6 +1,15 @@
 <!--index.wxml-->
 <view class="container">
-  <view class="banner"></view>
+  <view class="banner">
+    <swiper class="banner-swiper" indicator-dots="{{indicatorDots}}" autoplay="{{autoplay}}" interval="{{interval}}" duration="{{duration}}">
+      <block wx:for="{{bannerImgs}}" wx:for-item="item" wx:for-index="idx" wx:key="*this">
+        <swiper-item>
+          <image class="banner-swiper-img" src="{{item}}" />
+          <!-- <view class="swiper-item {{item}}">{{item}}</view> -->
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
   <view class="profile box">
     <image class="profile_avator" src="{{profileAvator}}"></image>
     <view class="profile_info">
@@ -26,7 +35,16 @@
   </view>
 
   <view class="info box">
-    <view class="info-title">医师介绍</view>
-    <view class="info-items"></view>
+    <view class="info-title userlist">医师介绍</view>
+    <view class="info-userlist">
+      <view class="info-userlist-item" wx:for="{{doctorList}}" wx:for-item="item" wx:for-index="idx" wx:key="key">
+        <image class="info-userlist-item__avator" src="{{item.avator}}" />
+        <view class="info-userlist-item__box">
+          <view class="info-userlist-item__name">{{item.name}}</view>
+          <view class="info-userlist-item__title">{{item.title}}</view>
+          <view class="info-userlist-item__desc">{{item.desc}}</view>
+        </view>
+      </view>
+    </view>
   </view>
 </view>
