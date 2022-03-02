@@ -17,6 +17,7 @@ module.exports = {
   appId: "wx94687d0c59c97070",
   app: "src/miniprogram/app",
   compileType: "miniprogram",
+  outputDir: "dist/miniprogram",
   sourceMap: (mode) => (mode !== "production" ? true : false),
   plugins: [
     "@mpflow/plugin-babel",
