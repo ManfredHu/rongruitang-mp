@@ -15,8 +15,9 @@ const HostMap = {
 
 module.exports = {
   appId: "wx94687d0c59c97070",
-  app: "src/app",
+  app: "src/miniprogram/app",
   compileType: "miniprogram",
+  sourceMap: (mode) => (mode !== "production" ? true : false),
   plugins: [
     "@mpflow/plugin-babel",
     "@mpflow/plugin-typescript",
@@ -34,9 +35,10 @@ module.exports = {
   },
   configureWebpackChain: (config) => {
     // 别名设置, require.resolve
-    config.resolve.alias.set("@base", "src/base");
-    config.resolve.alias.set("@utils", "src/utils");
-    config.resolve.alias.set("@config", "src/config");
+    config.resolve.alias.set("@base", "src/miniprogram/base");
+    config.resolve.alias.set("@utils", "src/miniprogram/utils");
+    config.resolve.alias.set("@config", "src/miniprogram/config");
+    config.resolve.alias.set("@image", "src/miniprogram/image");
   },
   settings: {
     urlCheck: true,

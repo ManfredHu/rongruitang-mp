@@ -12,16 +12,19 @@
     "baseUrl": ".",
     "paths": {
       "@/*": [
-        "src/*"
+        "src/miniprogram/*"
       ],
       "@base/*": [
-        "src/base/*"
+        "src/miniprogram/base/*"
       ],
       "@utils/*": [
-        "src/utils/*"
+        "src/miniprogram/utils/*"
       ],
       "@config/*": [
-        "src/config/*"
+        "src/miniprogram/config/*"
+      ],
+      "@image/*": [
+        "src/miniprogram/image/*"
       ]
     },
     "lib": [
@@ -31,8 +34,8 @@
   "include": [
     "src/**/*.ts",
     "src/**/*.tsx",
-    "typings"
-, "src/custom-tab-bar/index.js"  ],
+    "typings",
+  ],
   "exclude": [
     "node_modules"
   ]

@@ -1,17 +1,17 @@
 import type {
   GlobalData
-} from '../app'
+} from '../miniprogram/app'
 
-import appJson from "../app.json";
+import appJson from "../miniprogram/app.json";
 import themeJson from "../../demo.theme.json";
 
 // 含webpack hash string 的引用对象
-const icon_home = require("../image/icon_home.png"); 
-const icon_home_HL = require("../image/icon_home_HL.png"); 
-const icon_order = require("../image/icon_order.png"); 
-const icon_order_HL = require("../image/icon_order_HL.png"); 
-const icon_user = require("../image/icon_user.png"); 
-const icon_user_HL = require("../image/icon_user_HL.png"); 
+const icon_home = require("@image/icon_home.png"); 
+const icon_home_HL = require("@image/icon_home_HL.png"); 
+const icon_order = require("@image/icon_order.png"); 
+const icon_order_HL = require("@image/icon_order_HL.png"); 
+const icon_user = require("@image/icon_user.png"); 
+const icon_user_HL = require("@image/icon_user_HL.png"); 
 
 
 const list = [
