@@ -4,30 +4,30 @@
   padding: 0;
 }
 
-@banner-height: 750/16*9rpx;
-.banner{
+@banner-height: 750/16 * 9rpx;
+.banner {
   width: 100%;
   height: @banner-height;
   // padding: 32rpx;
-  background: linear-gradient(180deg,#2ecc71 0,#69ca91 25%);
+  background: linear-gradient(180deg, #2ecc71 0, #69ca91 25%);
   box-sizing: border-box;
-  &-swiper{
+  &-swiper {
     height: 100%;
     width: 100%;
-    &-img{
+    &-img {
       height: 100%;
       width: 100%;
     }
   }
 }
 
-.myInfo{
+.myInfo {
   position: relative;
   top: -100rpx;
-  &-avatorbox{
+  &-avatorbox {
     display: flex;
     padding: 32rpx;
-    &__avator{
+    &__avator {
       height: 120rpx;
       width: 120rpx;
       border-radius: 50%;
@@ -40,7 +40,12 @@
       margin-right: 40rpx;
       align-items: center;
     }
-    &__name{
+    &__img {
+      height: 100%;
+      width: 100%;
+      border-radius: 50%;
+    }
+    &__name {
       // flex: 1;
       display: flex;
       align-items: center;
@@ -48,7 +53,7 @@
       font-weight: bold;
       margin-bottom: 10rpx;
     }
-    &__btn{
+    &__btn {
       padding: 10rpx 16rpx;
       width: auto !important;
       background: #fff;
@@ -59,14 +64,14 @@
       font-weight: normal;
     }
   }
-  &-avatorDesc{
+  &-avatorDesc {
     display: flex;
     flex-direction: column;
     justify-content: center;
   }
 }
 
-.version{
+.version {
   display: flex;
   justify-content: center;
   align-items: center;

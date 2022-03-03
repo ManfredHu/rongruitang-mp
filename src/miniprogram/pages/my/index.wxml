@@ -4,13 +4,16 @@
   <view class="myInfo box">
     <view class="myInfo-avatorbox">
       <view class="myInfo-avatorbox__avator">
-        <mp-icon type="filled" icon="me" color="#aaa" size="{{40}}"></mp-icon>
+        <mp-icon wx:if="{{!hasUserInfo}}"type="filled" icon="me" color="#aaa" size="{{40}}"></mp-icon>
+        <image wx:else class="myInfo-avatorbox__img"  src="{{userInfo.avatarUrl}}"></image>
       </view>
       
-      <!-- <image class="myInfo-avatorbox__avator" src=""></image> -->
       <view class="myInfo-avatorDesc">
-        <view class="myInfo-avatorbox__name">{{myName}}</view>
-        <button class="myInfo-avatorbox__btn">登陆/注册</button>
+        <view class="myInfo-avatorbox__name">{{userInfo.nickName}}</view>
+        <block wx:if="{{!hasUserInfo}}">
+          <button class="myInfo-avatorbox__btn" wx:if="{{canIUseGetUserProfile}}" bindtap="getUserProfile">登陆/注册</button>
+          <button class="myInfo-avatorbox__btn" wx:else open-type="getUserInfo" bindgetuserinfo="getUserInfo">登陆/注册</button>
+        </block>
       </view>
       
     </view>
