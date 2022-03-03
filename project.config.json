@@ -1,0 +1,32 @@
+{
+  "cloudfunctionRoot": "dist/cloudfunctions/",
+  "description": "项目配置文件",
+  "projectname": "%E4%B8%9C%E8%8E%9E%E5%B8%82%E8%8D%A3%E7%91%9E%E5%A0%82%E4%B8%AD%E5%8C%BB%E8%AF%8A%E6%89%80",
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "pages/appointment/index",
+          "pathName": "pages/appointment/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/my/index",
+          "pathName": "pages/my/index",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

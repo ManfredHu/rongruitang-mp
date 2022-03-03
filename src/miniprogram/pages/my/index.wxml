@@ -1,1 +1,21 @@
-<view>my page</view>
+<view class="container">
+  <view class="banner"></view>
+
+  <view class="myInfo box">
+    <view class="myInfo-avatorbox">
+      <view class="myInfo-avatorbox__avator">
+        <mp-icon type="filled" icon="me" color="#aaa" size="{{40}}"></mp-icon>
+      </view>
+      
+      <!-- <image class="myInfo-avatorbox__avator" src=""></image> -->
+      <view class="myInfo-avatorDesc">
+        <view class="myInfo-avatorbox__name">{{myName}}</view>
+        <button class="myInfo-avatorbox__btn">登陆/注册</button>
+      </view>
+      
+    </view>
+  </view>
+  <view class="version">
+    版本 {{version}}
+  </view>
+</view>

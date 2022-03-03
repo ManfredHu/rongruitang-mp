@@ -25,3 +25,6 @@ app.json配置`"darkmode": true,`后配合样式使用，js获取darkmode模式�
 
 ### 地址导航
 某个地址，可以点击按钮后拉起微信导航页，然后用微信或者第三方导航软件导航过去。因地址已录入高德地图，可以在[这里](https://lbs.amap.com/tools/picker)查询后拿到坐标结果，如`113.682537,22.824031`，然后通过API调起就行
+
+### 小程序框架mpflow不支持自定义`project.config.json`
+写了个webpack插件`build/MergeProjectConfigPlugin.js`支持根目录下`project.config.json`文件与mpflow生成的同名文件合并，根目录下文件会覆盖mpflow生成的

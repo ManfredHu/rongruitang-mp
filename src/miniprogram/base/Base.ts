@@ -10,8 +10,20 @@ class Base {
     this.#name = params.name || Math.random().toString(36).substring(2)
   }
 
-  getName() {
+  getSelfName() {
     return this.#name
+  }
+
+  setData(data, callback) {
+    this.setData(data, callback)
+  }
+
+  // 基类的公共方法
+  methods() {
+    return {
+      $getSelfName: this.getSelfName,
+      $setData: this.setData,
+    }
   }
 }
 

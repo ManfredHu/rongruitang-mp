@@ -2,7 +2,6 @@ const addressIcon = require("../image/icon_location.png");
 const phoneIcon = require("../image/icon_phone.png");
 const kfIcon = require("../image/icon_kf.png");
 
-console.log(`addressIcon`, addressIcon);
 export const profile = {
   title: "东莞市荣瑞堂中医诊所",
   desc: "营业时间 14:00 - 21:30",

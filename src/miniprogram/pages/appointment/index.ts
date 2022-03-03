@@ -1,20 +1,12 @@
-//logs.js
-import * as util from '../../utils/util'
-import { createPage, BasePage } from "@base/BasePage";
-createPage({
-  data: {
-    logs: [],
-  },
+import { BasePage, WxPage } from "@/base/BasePage";
+
+@WxPage
+export default class AppointmentPage extends BasePage {
+  readonly name = "page/appointment/index";
+
   onShow() {
-    (this as BasePage).setTabBar({
-      selected: 1
-    })
-  },
-  onLoad: function () {
-    this.setData({
-      logs: (wx.getStorageSync("logs") || []).map((log) => {
-        return util.formatTime(new Date(log));
-      }),
+    this.setTabBar({
+      selected: 1,
     });
-  },
-});
+  }
+}

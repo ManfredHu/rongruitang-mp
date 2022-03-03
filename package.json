@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": "true",
   "scripts": {
+    "init": "npm i",
     "build": "mpflow-service build",
     "dev": "mpflow-service dev",
     "dev:open": "mpflow-service dev --open"

@@ -1,6 +1,7 @@
 const webpack = require("webpack");
 const packageJson = require("./package.json");
-
+const fs = require('fs')
+const MergeProjectConfigPlugin = require('./build/MergeProjectConfigPlugin')
 const version = packageJson.version;
 const NODE_ENV = process.env.NODE_ENV;
 
@@ -18,6 +19,7 @@ module.exports = {
   app: "src/miniprogram/app",
   compileType: "miniprogram",
   outputDir: "dist/miniprogram",
+  miniprogramRoot: "miniprogram",
   sourceMap: (mode) => (mode !== "production" ? true : false),
   plugins: [
     "@mpflow/plugin-babel",
@@ -32,6 +34,7 @@ module.exports = {
         host: HostMap[NODE_ENV],
         __VERSION__: JSON.stringify(version),
       }),
+      new MergeProjectConfigPlugin(), // 合并覆盖mpflow输出的文件 project.config.json
     ],
   },
   configureWebpackChain: (config) => {
@@ -40,6 +43,13 @@ module.exports = {
     config.resolve.alias.set("@utils", "src/miniprogram/utils");
     config.resolve.alias.set("@config", "src/miniprogram/config");
     config.resolve.alias.set("@image", "src/miniprogram/image");
+
+    // diy定义其他流程
+    // config.plugin('mpflow').tap(([mpflowConfig]) => {
+    //   console.log(`mpflowConfig`, mpflowConfig.program);
+    //   return [mpflowConfig];
+    // })
+    // fs.writeFileSync("./webpack-output.json", config.toString());
   },
   settings: {
     urlCheck: true,
@@ -67,5 +77,9 @@ module.exports = {
     useIsolateContext: true,
     useCompilerModule: false,
     userConfirmedUseCompilerModuleSwitch: false,
+  },
+  useExtendedLib: {
+    // 使用扩展库，和 app.json 中的 useExtendedLib 相同即可
+    weui: true,
   },
 };

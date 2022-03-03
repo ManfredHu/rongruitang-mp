@@ -35,6 +35,7 @@ App({
   },
   globalData: {
     theme: wx.getSystemInfoSync().theme, // 主题
+    accountInfo: wx.getAccountInfoSync(),
     userInfo: null,
   } as GlobalData,
 });
