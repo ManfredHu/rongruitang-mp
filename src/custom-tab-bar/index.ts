@@ -52,7 +52,7 @@ Component({
   },
   attached() {},
   methods: {
-    switchTab(e: WechatMiniprogram.Event) {
+    switchTab(e: WechatMiniprogram.TouchEvent) {
       const data = e.currentTarget.dataset;
       const dataPath = data.path;
       const url = dataPath.startsWith("/") ? dataPath : `/${dataPath}`;
